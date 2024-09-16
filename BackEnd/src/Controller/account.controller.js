@@ -9,8 +9,6 @@ module.exports = class accountController {
     try{        
         const result = await accountRepo.addAccount( account );
         if( result ){
-               
-          await this.createEmail( result )
 
           return response.status(201).json({ "result" : result })
         }else{
@@ -77,11 +75,11 @@ module.exports = class accountController {
   
   }
 
-  async getAllTypeAccount( request, response ) {
+  async getAllAccount( request, response ) {
   
     try{
 
-      const result = await typeAccountRepo.findAllTypeAccount()
+      const result = await accountRepoo.findAllTypeAccount()
       return response.status(201).json( { result } )
   
     }catch(erro){

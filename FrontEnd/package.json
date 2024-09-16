@@ -1,0 +1,43 @@
+{
+  "name": "hms-front",
+  "version": "0.1.0",
+  "main": "App.tsx",
+  "description": "Um projeto front-end React com TypeScript",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "next": "^14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.22.0",
+    "react-toastify": "^10.0.4",
+    "styled-components": "^6.1.8",
+    "typescript": "4.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.25",
+    "@types/react-dom": "^18.2.11",
+    "concurrently": "^3.5.0",
+    "react-scripts": "5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

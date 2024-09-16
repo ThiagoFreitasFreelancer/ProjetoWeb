@@ -1,4 +1,6 @@
 const bkrypt = require('bcryptjs');
+const accountRepository = require("../Repository/account.repo");
+const repo = new accountRepository()
 
 module.exports = class accountController {
 
@@ -7,9 +9,10 @@ module.exports = class accountController {
     const account = request.body;
   
     try{        
-        const result = await accountRepo.addAccount( account );
-        if( result ){
+        //const result = await accountRepo.addAccount( account );
+        if( account != null ){
 
+          const result = repo.create(account);
           return response.status(201).json({ "result" : result })
         }else{
           return response.status(400).json({ "result" : "something is wrong" })
@@ -17,6 +20,7 @@ module.exports = class accountController {
   
     }catch(erro){
 
+      console.log(erro)
         return response.status(500).json({"erro" : erro})
     }
   
@@ -79,7 +83,7 @@ module.exports = class accountController {
   
     try{
 
-      const result = await accountRepoo.findAllTypeAccount()
+      const result = await repo.findAll()
       return response.status(201).json( { result } )
   
     }catch(erro){

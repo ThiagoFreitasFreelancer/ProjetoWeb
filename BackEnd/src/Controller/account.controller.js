@@ -13,7 +13,7 @@ module.exports = class accountController {
         if( account != null ){
 
           const result = repo.create(account);
-          return response.status(201).json({ "result" : result })
+          return response.status(201).json({ result: account });
         }else{
           return response.status(400).json({ "result" : "something is wrong" })
         }
@@ -46,7 +46,7 @@ module.exports = class accountController {
     const account = request.body;
   
     try{        
-        const result = await accountRepo.updateAccount( account );
+        const result = await repo.update( account );
         if( result ){
           return response.status( 201 ).json( { "result" : account } )
         }else{

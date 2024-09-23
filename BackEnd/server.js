@@ -1,5 +1,5 @@
 const express =  require(`express`);
-const accountRouter = require('./src/Routes/account.routes');
+const studentRouter = require('./src/Routes/student.routes');
 
 const app = express();
 app.use( express.json() );
@@ -11,6 +11,6 @@ var corsOptions = {
     optionsSuccessStatus: 204, // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
-app.use( accountRouter );
+app.use( studentRouter );
 
 app.listen(3001, () => console.log( "server is running!" ) );

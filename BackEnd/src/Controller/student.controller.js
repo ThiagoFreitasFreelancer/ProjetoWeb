@@ -1,8 +1,8 @@
 const bkrypt = require('bcryptjs');
-const accountRepository = require("../Repository/account.repo");
-const repo = new accountRepository()
+const studentRepository = require("../Repository/student.repo");
+const repo = new studentRepository()
 
-module.exports = class accountController {
+module.exports = class studentController {
 
   async createAccount(request, response) {
 

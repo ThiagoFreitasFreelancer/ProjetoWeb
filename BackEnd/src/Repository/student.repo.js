@@ -1,12 +1,14 @@
 
 
 
-module.exports = class accountRepo {
+module.exports = class studentRepo {
 
     alunos = [  ]
 
     create(params) {
-       
+        
+        let id = this.alunos.length;
+        params.push(' "id":'.concat() )
         this.alunos.push(params)
         return this.alunos
         
